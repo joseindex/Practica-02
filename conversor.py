@@ -1,5 +1,6 @@
 import json  
 from datetime import datetime  
+
 def cargar_tasas(ruta):  
     with open(ruta, "r") as archivo:  
         return json.load(archivo)  
@@ -17,4 +18,4 @@ if __name__ == "__main__":
     tasas = cargar_tasas("/data/tasas.json")  
     precio_usd = 100.00  
     eur = convertir(precio_usd, "EUR", tasas)  
-    registrar_transaccion("Laptop", eur, "EUR", "/logs/historial.txt")  
+    registrar_transaccion("Laptop", eur, "EUR", "/logs/historial.txt") 
